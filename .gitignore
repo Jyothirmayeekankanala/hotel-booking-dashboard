@@ -1,0 +1,59 @@
+# -------------------------
+# Python / FastAPI
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+.env
+.env.*
+instance/
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# -------------------------
+# Node / React
+# -------------------------
+# Dependency directories
+node_modules/
+# Production build
+build/
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Local env
+frontend/.env
+frontend/.env.*
+
+# -------------------------
+# Docker
+# -------------------------
+docker-compose.override.yml
+docker-compose.local.yml
+.dockerignore
+
+# -------------------------
+# IDE / Editor
+# -------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -------------------------
+# OS-specific
+# -------------------------
+.DS_Store
+Thumbs.db
