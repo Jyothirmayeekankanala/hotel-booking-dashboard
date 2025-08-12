@@ -10,11 +10,8 @@ function App() {
   const [bookings, setBookings] = useState([])
 
   useEffect(() => {
-    console.log('Fetching bookings...')
     fetchBookings().then((data) => {
-      console.log(data)
       setBookings(data)
-      console.log(bookings)
   })
   }, [])
   return (

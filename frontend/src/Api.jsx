@@ -1,9 +1,8 @@
-const API_URL = 'http://localhost:8000/bookings/';
+export const API_URL = 'https://api-service-dlp9.onrender.com' || 'http://localhost:8000';
 
 export const fetchBookings = async () => {
     try {
-        console.log('Fetching bookings from:', API_URL);
-        const response = await fetch(API_URL);
+        const response = await fetch(`${API_URL}/bookings/`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

@@ -10,9 +10,16 @@ from datetime import date
 database.Base.metadata.create_all(database.engine)
 
 app = FastAPI()
+
+# Allowed origins
+origins = [
+    "https://web-app-hkme.onrender.com",  # Your Render frontend
+    "http://localhost:3000",              # Local dev frontend
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=origins,        # or ["*"] to allow all
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

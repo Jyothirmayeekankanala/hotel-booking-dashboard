@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import {API_URL} from '../Api';
 
 export default function Bookings({ bookings }) {
     const [info, setInfo] = useState({})
         useEffect(() => {
-        fetch('http://localhost:8000/bookings-stats/')
+        fetch(`${API_URL}/bookings-stats/`)
             .then((response) => response.json())
             .then((data) => {
                 setInfo(data);

@@ -4,8 +4,10 @@ from sqlalchemy.orm import sessionmaker
 import enum
 from .schemas import Room_Type, Hotel_Name
 
-DATABASE_URL = "postgresql://user:password@localhost:5432/hotel_db"
+# DATABASE_URL = "postgresql://user:password@localhost:5432/hotel_db"
+DATABASE_URL = "postgresql://user:QASx29qyaMlOhjRcPorb7MnS6DKHQBzn@dpg-d2dli595pdvs73f1d9kg-a/hoteldb_xl3p"
 
+# DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

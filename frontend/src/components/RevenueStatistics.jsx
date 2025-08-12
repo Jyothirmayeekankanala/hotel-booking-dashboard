@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
+import {API_URL} from '../Api';
 
 export default function RevenueOverTimeChart() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/revenue-over-time')
+    fetch(`${API_URL}/revenue-over-time`)
       .then(res => res.json())
       .then(setData);
   }, []);

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { PieChart, Pie, Cell, Legend, Tooltip, ResponsiveContainer } from 'recharts';
+import {API_URL} from '../Api';
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
@@ -7,7 +8,7 @@ export default function RoomTypePieChart() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/room-type-stats/')
+    fetch(`${API_URL}/room-type-stats/`)
       .then(res => res.json())
       .then(setData);
   }, []);
